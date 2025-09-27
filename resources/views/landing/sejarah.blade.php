@@ -119,61 +119,6 @@
     </div>
     <!-- Timeline End -->
 
-    <!-- Fact Counter -->
-    <div class="container-fluid counter py-5">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="counter-item">
-                        <div class="counter-item-icon mx-auto">
-                            <i class="fas fa-thumbs-up fa-3x text-white"></i>
-                        </div>
-                        <h4 class="text-white my-4">Pelanggan Bahagia</h4>
-                        <div class="counter-counting">
-                            <span class="text-white fs-2 fw-bold" data-toggle="counter-up">50.000</span>
-                            <span class="h1 fw-bold text-white">+</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="counter-item">
-                        <div class="counter-item-icon mx-auto">
-                            <i class="fas fa-truck fa-3x text-white"></i>
-                        </div>
-                        <h4 class="text-white my-4">Pengiriman</h4>
-                        <div class="counter-counting">
-                            <span class="text-white fs-2 fw-bold" data-toggle="counter-up">513</span>
-                            <span class="h1 fw-bold text-white">+</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
-                    <div class="counter-item">
-                        <div class="counter-item-icon mx-auto">
-                            <i class="fas fa-users fa-3x text-white"></i>
-                        </div>
-                        <h4 class="text-white my-4">Karyawan</h4>
-                        <div class="counter-counting">
-                            <span class="text-white fs-2 fw-bold" data-toggle="counter-up">150</span>
-                            <span class="h1 fw-bold text-white">+</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.8s">
-                    <div class="counter-item">
-                        <div class="counter-item-icon mx-auto">
-                            <i class="fas fa-heart fa-3x text-white"></i>
-                        </div>
-                        <h4 class="text-white my-4">Tahun Pengalaman</h4>
-                        <div class="counter-counting">
-                            <span class="text-white fs-2 fw-bold" data-toggle="counter-up">20</span>
-                            <span class="h1 fw-bold text-white">+</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Fact Counter -->
+
 
 @endsection

@@ -28,6 +28,130 @@
             background-color: #f1f5f9;
             display: flex;
             min-height: 100vh;
+            flex-direction: column;
+        }
+
+        /* Header Top Bar */
+        .header-top {
+            background: white;
+            padding: 15px 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 250px;
+            right: 0;
+            z-index: 1000;
+            height: 70px;
+        }
+
+        .header-top .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .header-top .logo img {
+            width: 120px;
+            height: auto;
+        }
+
+        .header-top .page-title h1 {
+            font-size: 1.5rem;
+            color: var(--dark);
+            margin-bottom: 5px;
+        }
+
+        .header-top .page-title p {
+            font-size: 0.9rem;
+            color: var(--secondary);
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .search-bar {
+            position: relative;
+        }
+
+        .search-bar input {
+            padding: 10px 15px 10px 40px;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            font-size: 14px;
+            width: 300px;
+        }
+
+        .search-bar i {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--secondary);
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .notification-bell {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .notification-badge {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: var(--danger);
+            color: white;
+            border-radius: 50%;
+            width: 18px;
+            height: 18px;
+            font-size: 0.7rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .user-profile {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+        }
+
+        .user-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .user-details {
+            text-align: right;
+        }
+
+        .user-details .name {
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .user-details .role {
+            font-size: 0.8rem;
+            color: var(--secondary);
         }
 
         /* Sidebar */
@@ -38,25 +162,33 @@
             height: 100vh;
             position: fixed;
             transition: all 0.3s;
+            z-index: 1001;
         }
 
-        .logo {
-            padding: 20px;
+        .sidebar .logo {
+            /* padding: 20px; */
             text-align: center;
             border-bottom: 1px solid #334155;
         }
 
-        .logo h2 {
-            color: var(--primary);
-            font-size: 1.5rem;
-        }
-
-        .logo span {
-            color: white;
+        .sidebar .logo img {
+            width: 100px;
+            height: auto;
         }
 
         .nav-links {
             padding: 20px 0;
+            height: calc(100vh - 80px);
+            overflow-y: auto;
+        }
+
+        .nav-links::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        .nav-links::-webkit-scrollbar-thumb {
+            background: #475569;
+            border-radius: 10px;
         }
 
         .nav-links li {
@@ -91,45 +223,9 @@
         .main-content {
             flex: 1;
             margin-left: 250px;
-            padding: 20px;
-        }
-
-        .header {
-            display: flex;
-            justify-content: between;
-            align-items: center;
-            margin-bottom: 30px;
-        }
-
-        .search-bar {
-            flex: 1;
-            max-width: 400px;
-        }
-
-        .search-bar input {
-            width: 100%;
-            padding: 10px 15px;
-            border: 1px solid #cbd5e1;
-            border-radius: 8px;
-            font-size: 14px;
-        }
-
-        .user-info {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .user-avatar {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: var(--primary);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
+            margin-top: 70px;
+            padding: 30px;
+            min-height: calc(100vh - 120px);
         }
 
         /* Stats Grid */
@@ -148,6 +244,11 @@
             display: flex;
             align-items: center;
             gap: 15px;
+            transition: transform 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-2px);
         }
 
         .stat-icon {
@@ -192,7 +293,7 @@
 
         .chart-header {
             display: flex;
-            justify-content: between;
+            justify-content: space-between;
             align-items: center;
             margin-bottom: 20px;
         }
@@ -241,6 +342,44 @@
         .status.pending { background: #fef3c7; color: #92400e; }
         .status.processing { background: #dbeafe; color: #1e40af; }
 
+        /* Footer */
+        .footer {
+            background: var(--dark);
+            color: white;
+            padding: 20px 30px;
+            margin-left: 250px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .copyright {
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+
         @media (max-width: 768px) {
             .sidebar {
                 width: 70px;
@@ -251,45 +390,93 @@
             .main-content {
                 margin-left: 70px;
             }
+            .header-top {
+                left: 70px;
+            }
+            .footer {
+                margin-left: 70px;
+            }
             .charts-grid {
                 grid-template-columns: 1fr;
+            }
+            .search-bar input {
+                width: 200px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-top {
+                padding: 15px 20px;
+            }
+            .search-bar input {
+                width: 150px;
+            }
+            .user-details {
+                display: none;
             }
         }
     </style>
 </head>
 <body>
+    <!-- Header -->
+    <div class="header-top">
+        <div class="logo">
+            <div class="page-title">
+                <h1>Dashboard Admin</h1>
+                <p>Tripanca Air Mineral</p>
+            </div>
+        </div>
+        
+        <div class="header-actions">
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Cari produk, laporan, atau pengguna...">
+            </div>
+            
+            <div class="user-info">
+                <div class="notification-bell">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge">3</span>
+                </div>
+                
+                <div class="user-profile">
+                    <div class="user-avatar">AD</div>
+                    <div class="user-details">
+                        <div class="name">Admin Tripanca</div>
+                        <div class="role">Super Admin</div>
+                    </div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Sidebar -->
     <div class="sidebar">
         <div class="logo">
-            <h2>Tripanca<span>Admin</span></h2>
+            <img src="/build/assets/img/logo.png" alt="Tripanca Logo">
         </div>
         <ul class="nav-links">
             <li class="active"><a href="#"><i class="fas fa-home"></i> <span>Dashboard</span></a></li>
+            <li><a href="#"><i class="fas fa-image"></i> <span>Banner</span></a></li>
+            <li><a href="#"><i class="fas fa-info-circle"></i> <span>Tentang Kami</span></a></li>
             <li><a href="#"><i class="fas fa-box"></i> <span>Produk</span></a></li>
-            <li><a href="#"><i class="fas fa-warehouse"></i> <span>Stok</span></a></li>
-            <li><a href="#"><i class="fas fa-chart-bar"></i> <span>Laporan</span></a></li>
-            <li><a href="#"><i class="fas fa-shopping-cart"></i> <span>Penjualan</span></a></li>
-            <li><a href="#"><i class="fas fa-users"></i> <span>Users</span></a></li>
-            <li><a href="#"><i class="fas fa-cog"></i> <span>Settings</span></a></li>
+            <li><a href="#"><i class="fas fa-blog"></i> <span>Blog</span></a></li>
+            <li><a href="#"><i class="fas fa-users"></i> <span>Tim</span></a></li>
+            <li><a href="#"><i class="fas fa-star"></i> <span>Ulasan</span></a></li>
+            <li><a href="#"><i class="fas fa-phone"></i> <span>Kontak</span></a></li>
+            <li><a href="#"><i class="fas fa-history"></i> <span>Sejarah</span></a></li>
+            <li><a href="#"><i class="fas fa-eye"></i> <span>Visi & Misi</span></a></li>
+            <li><a href="#"><i class="fas fa-building"></i> <span>Bidang Usaha</span></a></li>
+            <li><a href="#"><i class="fas fa-images"></i> <span>Foto</span></a></li>
+            <li><a href="#"><i class="fas fa-video"></i> <span>Video</span></a></li>
+            <li><a href="#"><i class="fas fa-user-friends"></i> <span>User</span></a></li>
+            <li><a href="#"><i class="fas fa-user"></i> <span>Profile</span></a></li>
         </ul>
     </div>
 
     <!-- Main Content -->
     <div class="main-content">
-        <!-- Header -->
-        <div class="header">
-            <div class="search-bar">
-                <input type="text" placeholder="Cari produk, laporan, atau pengguna...">
-            </div>
-            <div class="user-info">
-                <div class="notifications">
-                    <i class="fas fa-bell"></i>
-                </div>
-                <div class="user-avatar">AD</div>
-                <span>Admin Tripanca</span>
-            </div>
-        </div>
-
         <!-- Stats Grid -->
         <div class="stats-grid">
             <div class="stat-card">
@@ -400,6 +587,20 @@
         </div>
     </div>
 
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer-content">
+            <div class="copyright">
+                &copy; 2024 Tripanca Air Mineral. All rights reserved.
+            </div>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Help Center</a>
+            </div>
+        </div>
+    </div>
+
     <script>
         // Sales Chart
         const salesCtx = document.getElementById('salesChart').getContext('2d');
@@ -450,6 +651,16 @@
                     }
                 }
             }
+        });
+
+        // Notification bell click
+        document.querySelector('.notification-bell').addEventListener('click', function() {
+            alert('Anda memiliki 3 notifikasi baru');
+        });
+
+        // User profile dropdown
+        document.querySelector('.user-profile').addEventListener('click', function() {
+            alert('Menu profil user akan ditampilkan di sini');
         });
     </script>
 </body>
