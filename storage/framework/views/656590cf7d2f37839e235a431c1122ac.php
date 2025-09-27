@@ -1,5 +1,3 @@
-
-
 <?php $__env->startSection('title', 'Tripanca - Air Mineral Berkualitas'); ?>
 
 <?php $__env->startSection('content'); ?>
