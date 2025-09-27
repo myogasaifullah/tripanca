@@ -1,0 +1,565 @@
+@extends('layouts.app')
+
+@section('title', 'Tripanca - Air Mineral Berkualitas')
+
+@section('content')
+
+
+    <!-- feature Start -->
+    <div class="container-fluid feature bg-light py-5">
+        <div class="container py-5">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                <h4 class="text-uppercase text-primary">Fitur Kami</h4>
+                <h1 class="display-3 text-capitalize mb-3">Nama Terpercaya dalam Industri Air Mineral</h1>
+            </div>
+            <div class="row g-4">
+                <div class=" col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="feature-item p-4">
+                        <div class="feature-icon mb-3"><i class="fas fa-hand-holding-water text-white fa-3x"></i></div>
+                        <a href="#" class="h4 mb-3">Kualitas Terjamin</a>
+                        <p class="mb-3">Setiap produk Tripanca melalui proses quality control yang ketat untuk memastikan kualitas dan keamanan air mineral.</p>
+                        <a href="#" class="btn text-secondary">Baca Selengkapnya <i class="fa fa-angle-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="feature-item p-4">
+                        <div class="feature-icon mb-3"><i class="fas fa-filter text-white fa-3x"></i></div>
+                        <a href="#" class="h4 mb-3">Proses Filtrasi Modern</a>
+                        <p class="mb-3">Menggunakan teknologi filtrasi terkini untuk menjaga kemurnian air tanpa mengurangi kandungan mineral alaminya.</p>
+                        <a href="#" class="btn text-secondary">Baca Selengkapnya <i class="fa fa-angle-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="feature-item p-4">
+                        <div class="feature-icon mb-3"><i class="fas fa-recycle text-white fa-3x"></i></div>
+                        <a href="#" class="h4 mb-3">Kemasan Ramah Lingkungan</a>
+                        <p class="mb-3">Kemasan Tripanca didesain dengan memperhatikan aspek lingkungan dan dapat didaur ulang.</p>
+                        <a href="#" class="btn text-secondary">Baca Selengkapnya <i class="fa fa-angle-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.8s">
+                    <div class="feature-item p-4">
+                        <div class="feature-icon mb-3"><i class="fas fa-microscope text-white fa-3x"></i></div>
+                        <a href="#" class="h4 mb-3">Kontrol Laboratorium</a>
+                        <p class="mb-3">Setiap batch produk diuji di laboratorium internal untuk memastikan standar kualitas yang konsisten.</p>
+                        <a href="#" class="btn text-secondary">Baca Selengkapnya <i class="fa fa-angle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- feature End -->
+
+
+    <!-- About Start -->
+    <div class="container-fluid about overflow-hidden py-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-xl-6 wow fadeInLeft" data-wow-delay="0.2s">
+                    <div class="about-img rounded h-100">
+                        <img src="/build/assets/img/about.jpg" class="img-fluid rounded h-100 w-100" style="object-fit: cover;" alt="">
+                        <div class="about-exp"><span>Pengalaman 20 Tahun</span></div>
+                    </div>
+                </div>
+                <div class="col-xl-6 wow fadeInRight" data-wow-delay="0.2s">
+                    <div class="about-item">
+                        <h4 class="text-primary text-uppercase">Tentang Kami</h4>
+                        <h1 class="display-3 mb-3">Kami Menyediakan Air Mineral Berkualitas.</h1>
+                        <p class="mb-4">PT Tirta Panca Anugrah (Tripanca) telah menjadi produsen air minum dalam kemasan terpercaya sejak tahun 2003. Dengan komitmen untuk menyediakan air mineral berkualitas tinggi dari sumber mata air pegunungan terpilih.
+                        </p>
+                        <div class="bg-light rounded p-4 mb-4">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="d-flex">
+                                        <div class="pe-4">
+                                            <div class="rounded-circle bg-primary d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;"><i class="fas fa-tint text-white fa-2x"></i></div>
+                                        </div>
+                                        <div class="">
+                                            <a href="#" class="h4 d-inline-block mb-3">Pelanggan Puas</a>
+                                            <p class="mb-0">Ribuan pelanggan telah mempercayai Tripanca sebagai pilihan utama air mineral sehari-hari mereka.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-light rounded p-4 mb-4">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="d-flex">
+                                        <div class="pe-4">
+                                            <div class="rounded-circle bg-primary d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;"><i class="fas fa-faucet text-white fa-2x"></i></div>
+                                        </div>
+                                        <div class="">
+                                            <a href="#" class="h4 d-inline-block mb-3">Produk Standar</a>
+                                            <p class="mb-0">Semua produk Tripanca memenuhi standar nasional dan internasional untuk keamanan pangan.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-secondary rounded-pill py-3 px-5">Baca Selengkapnya</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Fact Counter -->
+    <div class="container-fluid counter py-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="counter-item">
+                        <div class="counter-item-icon mx-auto">
+                            <i class="fas fa-thumbs-up fa-3x text-white"></i>
+                        </div>
+                        <h4 class="text-white my-4">Pelanggan Bahagia</h4>
+                        <div class="counter-counting">
+                            <span class="text-white fs-2 fw-bold" data-toggle="counter-up">50.000</span>
+                            <span class="h1 fw-bold text-white">+</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="counter-item">
+                        <div class="counter-item-icon mx-auto">
+                            <i class="fas fa-truck fa-3x text-white"></i>
+                        </div>
+                        <h4 class="text-white my-4">Pengiriman</h4>
+                        <div class="counter-counting">
+                            <span class="text-white fs-2 fw-bold" data-toggle="counter-up">513</span>
+                            <span class="h1 fw-bold text-white">+</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="counter-item">
+                        <div class="counter-item-icon mx-auto">
+                            <i class="fas fa-users fa-3x text-white"></i>
+                        </div>
+                        <h4 class="text-white my-4">Karyawan</h4>
+                        <div class="counter-counting">
+                            <span class="text-white fs-2 fw-bold" data-toggle="counter-up">150</span>
+                            <span class="h1 fw-bold text-white">+</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.8s">
+                    <div class="counter-item">
+                        <div class="counter-item-icon mx-auto">
+                            <i class="fas fa-heart fa-3x text-white"></i>
+                        </div>
+                        <h4 class="text-white my-4">Tahun Pengalaman</h4>
+                        <div class="counter-counting">
+                            <span class="text-white fs-2 fw-bold" data-toggle="counter-up">20</span>
+                            <span class="h1 fw-bold text-white">+</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fact Counter -->
+
+    <!-- Service Start -->
+    <div class="container-fluid service bg-light overflow-hidden py-5">
+        <div class="container py-5">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                <h4 class="text-uppercase text-primary">Layanan Kami</h4>
+                <h1 class="display-3 text-capitalize mb-3">Lindungi Keluarga Anda dengan Air Terbaik</h1>
+            </div>
+            <div class="row gx-0 gy-4 align-items-center">
+                <div class="col-lg-6 col-xl-4 wow fadeInLeft" data-wow-delay="0.2s">
+                    <div class="service-item rounded p-4 mb-4">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="d-flex">
+                                    <div class="service-content text-end">
+                                        <a href="#" class="h4 d-inline-block mb-3">Air Mineral Rumah Tangga</a>
+                                        <p class="mb-0">Berbagai ukuran kemasan untuk kebutuhan sehari-hari keluarga Anda.</p>
+                                    </div>
+                                    <div class="ps-4">
+                                        <div class="service-btn"><i class="fas fa-hand-holding-water text-white fa-2x"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-item rounded p-4 mb-4">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="d-flex">
+                                    <div class="service-content text-end">
+                                        <a href="#" class="h4 d-inline-block mb-3">Air Mineral Komersial</a>
+                                        <p class="mb-0">Solusi untuk kantor, restoran, hotel, dan usaha komersial lainnya.</p>
+                                    </div>
+                                    <div class="ps-4">
+                                        <div class="service-btn"><i class="fas fa-dumpster-fire text-white fa-2x"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-item rounded p-4 mb-0">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="d-flex">
+                                    <div class="service-content text-end">
+                                        <a href="#" class="h4 d-inline-block mb-3">Pabrik Filtrasi</a>
+                                        <p class="mb-0">Teknologi filtrasi modern untuk menjaga kualitas dan kemurnian air.</p>
+                                    </div>
+                                    <div class="ps-4">
+                                        <div class="service-btn"><i class="fas fa-filter text-white fa-2x"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="bg-transparent">
+                        <img src="/build/assets/img/water.png" class="img-fluid w-100" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xl-4 wow fadeInRight" data-wow-delay="0.2s">
+                    <div class="service-item rounded p-4 mb-4">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="d-flex">
+                                    <div class="pe-4">
+                                        <div class="service-btn"><i class="fas fa-assistive-listening-systems text-white fa-2x"></i></div>
+                                    </div>
+                                    <div class="service-content">
+                                        <a href="#" class="h4 d-inline-block mb-3">Pelayanan Pelanggan</a>
+                                        <p class="mb-0">Tim customer service siap membantu kebutuhan dan pertanyaan Anda.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-item rounded p-4 mb-4">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="d-flex">
+                                    <div class="pe-4">
+                                        <div class="service-btn"><i class="fas fa-recycle text-white fa-2x"></i></div>
+                                    </div>
+                                    <div class="service-content">
+                                        <a href="#" class="h4 d-inline-block mb-3">Program Daur Ulang</a>
+                                        <p class="mb-0">Kami mendukung program daur ulang untuk lingkungan yang lebih baik.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-item rounded p-4 mb-0">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="d-flex">
+                                    <div class="pe-4">
+                                        <div class="service-btn"><i class="fas fa-project-diagram text-white fa-2x"></i></div>
+                                    </div>
+                                    <div class="service-content">
+                                        <a href="#" class="h4 d-inline-block mb-3">Perencanaan Proyek</a>
+                                        <p class="mb-0">Konsultasi dan perencanaan untuk kebutuhan air mineral skala besar.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+
+    <!-- Products Start -->
+    <div class="container-fluid product py-5">
+        <div class="container py-5">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                <h4 class="text-uppercase text-primary">Produk Kami</h4>
+                <h1 class="display-3 text-capitalize mb-3">Kami Menyediakan Kemasan Air Mineral Terbaik.</h1>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="product-item">
+                        <img src="/build/assets/img/water.png" class="img-fluid w-100 rounded-top" alt="Image">
+                        <div class="product-content bg-light text-center rounded-bottom p-4">
+                            <p>Botol 600ml</p>
+                            <a href="#" class="h4 d-inline-block mb-3">Tripanca Regular</a>
+                            <p class="fs-4 text-primary mb-3">Rp 5.000</p>
+                            <a href="#" class="btn btn-secondary rounded-pill py-2 px-4">Baca Selengkapnya</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="product-item">
+                        <img src="/build/assets/img/water.png" class="img-fluid w-100 rounded-top" alt="Image">
+                        <div class="product-content bg-light text-center rounded-bottom p-4">
+                            <p>Botol 1.5L</p>
+                            <a href="#" class="h4 d-inline-block mb-3">Tripanca Family</a>
+                            <p class="fs-4 text-primary mb-3">Rp 10.000</p>
+                            <a href="#" class="btn btn-secondary rounded-pill py-2 px-4">Baca Selengkapnya</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="product-item">
+                        <img src="/build/assets/img/water.png" class="img-fluid w-100 rounded-top" alt="Image">
+                        <div class="product-content bg-light text-center rounded-bottom p-4">
+                            <p>Galon 19L</p>
+                            <a href="#" class="h4 d-inline-block mb-3">Tripanca Galon</a>
+                            <p class="fs-4 text-primary mb-3">Rp 25.000</p>
+                            <a href="#" class="btn btn-secondary rounded-pill py-2 px-4">Baca Selengkapnya</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Products End -->
+
+
+    <!-- Blog Start -->
+    <div class="container-fluid blog pb-5">
+        <div class="container pb-5">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                <h4 class="text-uppercase text-primary">Blog Kami</h4>
+                <h1 class="display-3 text-capitalize mb-3">Artikel & Berita Terbaru</h1>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="blog-item">
+                        <div class="blog-img">
+                            <img src="/build/assets/img/blog-1.jpg" class="img-fluid rounded-top w-100" alt="">
+                            <div class="blog-date px-4 py-2"><i class="fa fa-calendar-alt me-1"></i> 12 Jan 2025</div>
+                        </div>
+                        <div class="blog-content rounded-bottom p-4">
+                            <a href="#" class="h4 d-inline-block mb-3">Manfaat Air Mineral untuk Kesehatan Tubuh</a>
+                            <p>Ketahui pentingnya konsumsi air mineral yang cukup untuk menjaga kesehatan tubuh Anda sehari-hari.</p>
+                            <a href="#" class="fw-bold text-secondary">Baca Selengkapnya <i class="fa fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="blog-item">
+                        <div class="blog-img">
+                            <img src="/build/assets/img/blog-2.jpg" class="img-fluid rounded-top w-100" alt="">
+                            <div class="blog-date px-4 py-2"><i class="fa fa-calendar-alt me-1"></i> 5 Jan 2025</div>
+                        </div>
+                        <div class="blog-content rounded-bottom p-4">
+                            <a href="#" class="h4 d-inline-block mb-3">Proses Produksi Air Mineral Tripanca</a>
+                            <p>Bagaimana Tripanca menjaga kualitas dan kemurnian air mineral dari sumber hingga ke tangan konsumen.</p>
+                            <a href="#" class="fw-bold text-secondary">Baca Selengkapnya <i class="fa fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="blog-item">
+                        <div class="blog-img">
+                            <img src="/build/assets/img/blog-3.jpg" class="img-fluid rounded-top w-100" alt="">
+                            <div class="blog-date px-4 py-2"><i class="fa fa-calendar-alt me-1"></i> 28 Des 2024</div>
+                        </div>
+                        <div class="blog-content rounded-bottom p-4">
+                            <a href="#" class="h4 d-inline-block mb-3">Tips Memilih Air Mineral yang Berkualitas</a>
+                            <p>Panduan praktis untuk memilih air mineral yang aman dan berkualitas untuk keluarga Anda.</p>
+                            <a href="#" class="fw-bold text-secondary">Baca Selengkapnya <i class="fa fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Blog End -->
+
+
+    <!-- Team Start -->
+    <div class="container-fluid team pb-5">
+        <div class="container pb-5">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                <h4 class="text-uppercase text-primary">Tim Kami</h4>
+                <h1 class="display-3 text-capitalize mb-3">Bertemu dengan Tim Profesional Tripanca</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="team-item p-4">
+                        <div class="team-inner rounded">
+                            <div class="team-img">
+                                <img src="/build/assets/img/team-1.jpg" class="img-fluid rounded-top w-100" alt="Image">
+                                <div class="team-share">
+                                    <a class="btn btn-secondary btn-md-square rounded-pill text-white mx-1" href=""><i class="fas fa-share-alt"></i></a>
+                                </div>
+                                <div class="team-icon rounded-pill py-2 px-2">
+                                    <a class="btn btn-secondary btn-sm-square rounded-pill mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-secondary btn-sm-square rounded-pill me-1" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-secondary btn-sm-square rounded-pill me-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                                    <a class="btn btn-secondary btn-sm-square rounded-pill me-1" href=""><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="bg-light rounded-bottom text-center py-4">
+                                <h4 class="mb-3">Budi Santoso</h4>
+                                <p class="mb-0">Direktur Utama</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="team-item p-4">
+                        <div class="team-inner rounded">
+                            <div class="team-img">
+                                <img src="/build/assets/img/team-2.jpg" class="img-fluid rounded-top w-100" alt="Image">
+                                <div class="team-share">
+                                    <a class="btn btn-secondary btn-md-square rounded-pill text-white mx-1" href=""><i class="fas fa-share-alt"></i></a>
+                                </div>
+                                <div class="team-icon rounded-pill py-2 px-2">
+                                    <a class="btn btn-secondary btn-sm-square rounded-pill mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-secondary btn-sm-square rounded-pill me-1" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-secondary btn-sm-square rounded-pill me-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                                    <a class="btn btn-secondary btn-sm-square rounded-pill me-1" href=""><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="bg-light rounded-bottom text-center py-4">
+                                <h4 class="mb-3">Siti Rahayu</h4>
+                                <p class="mb-0">Manajer Produksi</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="team-item p-4">
+                        <div class="team-inner rounded">
+                            <div class="team-img">
+                                <img src="/build/assets/img/team-3.jpg" class="img-fluid rounded-top w-100" alt="Image">
+                                <div class="team-share">
+                                    <a class="btn btn-secondary btn-md-square rounded-pill text-white mx-1" href=""><i class="fas fa-share-alt"></i></a>
+                                </div>
+                                <div class="team-icon rounded-pill py-2 px-2">
+                                    <a class="btn btn-secondary btn-sm-square rounded-pill mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-secondary btn-sm-square rounded-pill me-1" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-secondary btn-sm-square rounded-pill me-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                                    <a class="btn btn-secondary btn-sm-square rounded-pill me-1" href=""><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="bg-light rounded-bottom text-center py-4">
+                                <h4 class="mb-3">Ahmad Wijaya</h4>
+                                <p class="mb-0">Kepala Quality Control</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.8s">
+                    <div class="team-item p-4">
+                        <div class="team-inner rounded">
+                            <div class="team-img">
+                                <img src="/build/assets/img/team-4.jpg" class="img-fluid rounded-top w-100" alt="Image">
+                                <div class="team-share">
+                                    <a class="btn btn-secondary btn-md-square rounded-pill text-white mx-1" href=""><i class="fas fa-share-alt"></i></a>
+                                </div>
+                                <div class="team-icon rounded-pill py-2 px-2">
+                                    <a class="btn btn-secondary btn-sm-square rounded-pill mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-secondary btn-sm-square rounded-pill me-1" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-secondary btn-sm-square rounded-pill me-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                                    <a class="btn btn-secondary btn-sm-square rounded-pill me-1" href=""><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="bg-light rounded-bottom text-center py-4">
+                                <h4 class="mb-3">Dewi Lestari</h4>
+                                <p class="mb-0">Manajer Pemasaran</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Team End -->
+
+    <!-- Testimonial Start -->
+    <div class="container-fluid testimonial pb-5">
+        <div class="container pb-5">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                <h4 class="text-uppercase text-primary">Testimoni</h4>
+                <h1 class="display-3 text-capitalize mb-3">Ulasan dari pelanggan kami.</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.3s">
+                <div class="testimonial-item text-center p-4">
+                    <p>Sudah bertahun-tahun keluarga saya menggunakan Tripanca. Kualitasnya selalu terjaga dan harganya terjangkau. Recommended banget!
+                    </p>
+                    <div class="d-flex justify-content-center mb-4">
+                        <img src="/build/assets/img/testimonial-1.jpg" class="img-fluid border border-4 border-primary" style="width: 100px; height: 100px; border-radius: 50px;" alt="">
+                    </div>
+                    <div class="d-block">
+                        <h4 class="text-dark">Budi Setiawan</h4>
+                        <p class="m-0 pb-3">Karyawan Swasta</p>
+                        <div class="d-flex justify-content-center text-secondary">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item text-center p-4">
+                    <p>Untuk kebutuhan kantor, kami selalu memilih Tripanca. Pelayanannya cepat dan produknya berkualitas. Staf juga ramah-ramah.
+                    </p>
+                    <div class="d-flex justify-content-center mb-4">
+                        <img src="/build/assets/img/testimonial-2.jpg" class="img-fluid border border-4 border-primary" style="width: 100px; height: 100px; border-radius: 50px;" alt="">
+                    </div>
+                    <div class="d-block">
+                        <h4 class="text-dark">Sari Dewi</h4>
+                        <p class="m-0 pb-3">Manajer Kantor</p>
+                        <div class="d-flex justify-content-center text-secondary">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item text-center p-4">
+                    <p>Sebagai ibu rumah tangga, saya sangat memperhatikan kualitas air minum keluarga. Tripanca memberikan rasa aman dan nyaman.
+                    </p>
+                    <div class="d-flex justify-content-center mb-4">
+                        <img src="/build/assets/img/testimonial-3.jpg" class="img-fluid border border-4 border-primary" style="width: 100px; height: 100px; border-radius: 50px;" alt="">
+                    </div>
+                    <div class="d-block">
+                        <h4 class="text-dark">Maya Sari</h4>
+                        <p class="m-0 pb-3">Ibu Rumah Tangga</p>
+                        <div class="d-flex justify-content-center text-secondary">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item text-center p-4">
+                    <p>Restoran saya menggunakan Tripanca sejak awal buka. Pelanggan puas dengan kualitas airnya dan layanan pengirimannya tepat waktu.
+                    </p>
+                    <div class="d-flex justify-content-center mb-4">
+                        <img src="/build/assets/img/testimonial-3.jpg" class="img-fluid border border-4 border-primary" style="width: 100px; height: 100px; border-radius: 50px;" alt="">
+                    </div>
+                    <div class="d-block">
+                        <h4 class="text-dark">Rudi Hartono</h4>
+                        <p class="m-0 pb-3">Pemilik Restoran</p>
+                        <div class="d-flex justify-content-center text-secondary">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+    @endsection
