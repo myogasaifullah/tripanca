@@ -1,0 +1,4 @@
+- [x] Perbaiki link CSS bootstrap.min.css di welcome.blade.php
+- [x] Perbaiki link CSS style.css di welcome.blade.php
+- [x] Add routes for navbar links in web.php
+- [x] Correct /servive to /service in header.blade.php
