@@ -2,6 +2,10 @@
 
 <?php $__env->startSection('content'); ?>
 
+<?php
+    $products = \App\Models\Product::all();
+?>
+
 
     <!-- feature Start -->
     <div class="container-fluid feature bg-light py-5">
@@ -282,39 +286,19 @@
                 <h1 class="display-3 text-capitalize mb-3">Kami Menyediakan Kemasan Air Mineral Terbaik.</h1>
             </div>
             <div class="row g-4 justify-content-center">
-                <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.2s">
+                <?php $__currentLoopData = $products; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $index => $product): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="<?php echo e(0.2 + ($index * 0.2)); ?>s">
                     <div class="product-item">
-                        <img src="/build/assets/img/water.png" class="img-fluid w-100 rounded-top" alt="Image">
+                        <img src="<?php echo e($product->image ? asset('storage/' . $product->image) : '/build/assets/img/water.png'); ?>" class="img-fluid w-100 rounded-top" alt="Image">
                         <div class="product-content bg-light text-center rounded-bottom p-4">
-                            <p>Botol 600ml</p>
-                            <a href="#" class="h4 d-inline-block mb-3">Tripanca Regular</a>
-                            <p class="fs-4 text-primary mb-3">Rp 5.000</p>
+                            <p><?php echo e($product->size); ?></p>
+                            <a href="#" class="h4 d-inline-block mb-3"><?php echo e($product->name); ?></a>
+                            <p class="fs-4 text-primary mb-3">Rp <?php echo e(number_format($product->price, 0, ',', '.')); ?></p>
                             <a href="#" class="btn btn-secondary rounded-pill py-2 px-4">Baca Selengkapnya</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="product-item">
-                        <img src="/build/assets/img/water.png" class="img-fluid w-100 rounded-top" alt="Image">
-                        <div class="product-content bg-light text-center rounded-bottom p-4">
-                            <p>Botol 1.5L</p>
-                            <a href="#" class="h4 d-inline-block mb-3">Tripanca Family</a>
-                            <p class="fs-4 text-primary mb-3">Rp 10.000</p>
-                            <a href="#" class="btn btn-secondary rounded-pill py-2 px-4">Baca Selengkapnya</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.6s">
-                    <div class="product-item">
-                        <img src="/build/assets/img/water.png" class="img-fluid w-100 rounded-top" alt="Image">
-                        <div class="product-content bg-light text-center rounded-bottom p-4">
-                            <p>Galon 19L</p>
-                            <a href="#" class="h4 d-inline-block mb-3">Tripanca Galon</a>
-                            <p class="fs-4 text-primary mb-3">Rp 25.000</p>
-                            <a href="#" class="btn btn-secondary rounded-pill py-2 px-4">Baca Selengkapnya</a>
-                        </div>
-                    </div>
-                </div>
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             </div>
         </div>
     </div>

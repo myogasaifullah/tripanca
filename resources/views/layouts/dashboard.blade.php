@@ -55,8 +55,8 @@
         <ul class="nav-links">
             <li class="active"><a href="#"><i class="fas fa-home"></i> <span>Dashboard</span></a></li>
             <li><a href="banner"><i class="fas fa-image"></i> <span>Banner</span></a></li>
-            <li><a href="#"><i class="fas fa-info-circle"></i> <span>Tentang Kami</span></a></li>
-            <li><a href="#"><i class="fas fa-box"></i> <span>Produk</span></a></li>
+            <!-- <li><a href="#"><i class="fas fa-info-circle"></i> <span>Tentang Kami</span></a></li> -->
+            <li><a href="{{ route('produks.index') }}"><i class="fas fa-box"></i> <span>Produk</span></a></li>
             <li><a href="#"><i class="fas fa-blog"></i> <span>Blog</span></a></li>
             <li><a href="#"><i class="fas fa-users"></i> <span>Tim</span></a></li>
             <li><a href="#"><i class="fas fa-star"></i> <span>Ulasan</span></a></li>

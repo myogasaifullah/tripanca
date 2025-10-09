@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\BannerController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -50,6 +51,7 @@ Route::get('/kontak', function () {
 });
 
 Route::get('/banner', [BannerController::class, 'index'])->middleware('auth');
+Route::get('/produk', [ProductController::class, 'index'])->middleware('auth');
 
 
 Route::middleware('auth')->group(function () {
@@ -58,6 +60,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     Route::resource('banners', BannerController::class);
+    Route::resource('produks', \App\Http\Controllers\ProductController::class);
 });
 
 require __DIR__.'/auth.php';
