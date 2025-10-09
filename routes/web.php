@@ -1,10 +1,12 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\BannerController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('landing.welcome');
+    $banners = \App\Models\Banner::all();
+    return view('landing.welcome', compact('banners'));
 });
 
 Route::get('/dashboard', function () {
@@ -47,10 +49,15 @@ Route::get('/kontak', function () {
     return view('landing.kontak');
 });
 
+Route::get('/banner', [BannerController::class, 'index'])->middleware('auth');
+
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    Route::resource('banners', BannerController::class);
 });
 
 require __DIR__.'/auth.php';
