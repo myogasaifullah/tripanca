@@ -3,11 +3,15 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\BannerController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\TestimonialController;
 use Illuminate\Support\Facades\Route;
+
+use App\Models\Testimonial;
 
 Route::get('/', function () {
     $banners = \App\Models\Banner::all();
-    return view('landing.welcome', compact('banners'));
+    $testimonials = Testimonial::all();
+    return view('landing.welcome', compact('banners', 'testimonials'));
 });
 
 Route::get('/dashboard', function () {
@@ -52,6 +56,7 @@ Route::get('/kontak', function () {
 
 Route::get('/banner', [BannerController::class, 'index'])->middleware('auth');
 Route::get('/produk', [ProductController::class, 'index'])->middleware('auth');
+Route::get('/ulasan', [TestimonialController::class, 'index'])->middleware('auth');
 
 
 Route::middleware('auth')->group(function () {
@@ -61,6 +66,7 @@ Route::middleware('auth')->group(function () {
 
     Route::resource('banners', BannerController::class);
     Route::resource('produks', \App\Http\Controllers\ProductController::class);
+    Route::resource('testimonials', \App\Http\Controllers\TestimonialController::class);
 });
 
 require __DIR__.'/auth.php';

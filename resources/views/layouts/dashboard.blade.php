@@ -58,12 +58,12 @@
             <!-- <li><a href="#"><i class="fas fa-info-circle"></i> <span>Tentang Kami</span></a></li> -->
             <li><a href="{{ route('produks.index') }}"><i class="fas fa-box"></i> <span>Produk</span></a></li>
             <li><a href="#"><i class="fas fa-blog"></i> <span>Blog</span></a></li>
-            <li><a href="#"><i class="fas fa-users"></i> <span>Tim</span></a></li>
-            <li><a href="#"><i class="fas fa-star"></i> <span>Ulasan</span></a></li>
-            <li><a href="#"><i class="fas fa-phone"></i> <span>Kontak</span></a></li>
-            <li><a href="#"><i class="fas fa-history"></i> <span>Sejarah</span></a></li>
+            <!-- <li><a href="#"><i class="fas fa-users"></i> <span>Tim</span></a></li> -->
+            <li><a href="ulasan"><i class="fas fa-star"></i> <span>Ulasan</span></a></li>
+            <!-- <li><a href="#"><i class="fas fa-phone"></i> <span>Kontak</span></a></li> -->
+            <!-- <li><a href="#"><i class="fas fa-history"></i> <span>Sejarah</span></a></li> -->
             <li><a href="#"><i class="fas fa-eye"></i> <span>Visi & Misi</span></a></li>
-            <li><a href="#"><i class="fas fa-building"></i> <span>Bidang Usaha</span></a></li>
+            <!-- <li><a href="#"><i class="fas fa-building"></i> <span>Bidang Usaha</span></a></li> -->
             <li><a href="#"><i class="fas fa-images"></i> <span>Foto</span></a></li>
             <li><a href="#"><i class="fas fa-video"></i> <span>Video</span></a></li>
             <li><a href="#"><i class="fas fa-user-friends"></i> <span>User</span></a></li>

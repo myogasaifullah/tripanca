@@ -359,7 +359,7 @@
 
 
     <!-- Team Start -->
-    <div class="container-fluid team pb-5">
+    <!-- <div class="container-fluid team pb-5">
         <div class="container pb-5">
             <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
                 <h4 class="text-uppercase text-primary">Tim Kami</h4>
@@ -456,7 +456,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Team End -->
 
     <!-- Testimonial Start -->
@@ -467,78 +467,30 @@
                 <h1 class="display-3 text-capitalize mb-3">Ulasan dari pelanggan kami.</h1>
             </div>
             <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.3s">
+                <?php $__currentLoopData = $testimonials; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $testimonial): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <div class="testimonial-item text-center p-4">
-                    <p>Sudah bertahun-tahun keluarga saya menggunakan Tripanca. Kualitasnya selalu terjaga dan harganya terjangkau. Recommended banget!
-                    </p>
+                    <p><?php echo e($testimonial->review_text); ?></p>
                     <div class="d-flex justify-content-center mb-4">
-                        <img src="/build/assets/img/testimonial-1.jpg" class="img-fluid border border-4 border-primary" style="width: 100px; height: 100px; border-radius: 50px;" alt="">
+                        <?php if($testimonial->image): ?>
+                        <img src="<?php echo e(asset('storage/' . $testimonial->image)); ?>" class="img-fluid border border-4 border-primary" style="width: 100px; height: 100px; border-radius: 50px;" alt="<?php echo e($testimonial->name); ?>">
+                        <?php else: ?>
+                        <div class="w-24 h-24 bg-gray-300 rounded-full flex items-center justify-center text-gray-600 text-xl font-bold">
+                            <?php echo e(substr($testimonial->name, 0, 1)); ?>
+
+                        </div>
+                        <?php endif; ?>
                     </div>
                     <div class="d-block">
-                        <h4 class="text-dark">Budi Setiawan</h4>
-                        <p class="m-0 pb-3">Karyawan Swasta</p>
+                        <h4 class="text-dark"><?php echo e($testimonial->name); ?></h4>
+                        <p class="m-0 pb-3"><?php echo e($testimonial->position); ?></p>
                         <div class="d-flex justify-content-center text-secondary">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+                            <?php for($i = 1; $i <= 5; $i++): ?>
+                                <i class="fas fa-star <?php echo e($i <= $testimonial->rating ? 'text-yellow-400' : 'text-gray-300'); ?>"></i>
+                            <?php endfor; ?>
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-item text-center p-4">
-                    <p>Untuk kebutuhan kantor, kami selalu memilih Tripanca. Pelayanannya cepat dan produknya berkualitas. Staf juga ramah-ramah.
-                    </p>
-                    <div class="d-flex justify-content-center mb-4">
-                        <img src="/build/assets/img/testimonial-2.jpg" class="img-fluid border border-4 border-primary" style="width: 100px; height: 100px; border-radius: 50px;" alt="">
-                    </div>
-                    <div class="d-block">
-                        <h4 class="text-dark">Sari Dewi</h4>
-                        <p class="m-0 pb-3">Manajer Kantor</p>
-                        <div class="d-flex justify-content-center text-secondary">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-item text-center p-4">
-                    <p>Sebagai ibu rumah tangga, saya sangat memperhatikan kualitas air minum keluarga. Tripanca memberikan rasa aman dan nyaman.
-                    </p>
-                    <div class="d-flex justify-content-center mb-4">
-                        <img src="/build/assets/img/testimonial-3.jpg" class="img-fluid border border-4 border-primary" style="width: 100px; height: 100px; border-radius: 50px;" alt="">
-                    </div>
-                    <div class="d-block">
-                        <h4 class="text-dark">Maya Sari</h4>
-                        <p class="m-0 pb-3">Ibu Rumah Tangga</p>
-                        <div class="d-flex justify-content-center text-secondary">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-item text-center p-4">
-                    <p>Restoran saya menggunakan Tripanca sejak awal buka. Pelanggan puas dengan kualitas airnya dan layanan pengirimannya tepat waktu.
-                    </p>
-                    <div class="d-flex justify-content-center mb-4">
-                        <img src="/build/assets/img/testimonial-3.jpg" class="img-fluid border border-4 border-primary" style="width: 100px; height: 100px; border-radius: 50px;" alt="">
-                    </div>
-                    <div class="d-block">
-                        <h4 class="text-dark">Rudi Hartono</h4>
-                        <p class="m-0 pb-3">Pemilik Restoran</p>
-                        <div class="d-flex justify-content-center text-secondary">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                    </div>
-                </div>
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             </div>
         </div>
     </div>
