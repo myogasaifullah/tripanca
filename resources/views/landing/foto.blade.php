@@ -14,60 +14,17 @@
                 <h1 class="display-3 text-capitalize mb-3">Galeri Tripanca</h1>
             </div>
             <div class="row g-4">
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                @foreach($photos as $index => $photo)
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="{{ 0.2 + ($index * 0.2) }}s">
                     <div class="gallery-item">
-                        <img src="/build/assets/img/gallery-1.jpg" class="img-fluid w-100 rounded" alt="Produksi Air Mineral">
+                        <img src="{{ asset('storage/' . $photo->image) }}" class="img-fluid w-100 rounded" alt="{{ $photo->title }}">
                         <div class="gallery-overlay">
-                            <h5>Proses Filtrasi</h5>
-                            <p>Modern filtration technology in action.</p>
+                            <h5>{{ $photo->title }}</h5>
+                            <p>{{ $photo->description }}</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="gallery-item">
-                        <img src="/build/assets/img/gallery-2.jpg" class="img-fluid w-100 rounded" alt="Tim Produksi">
-                        <div class="gallery-overlay">
-                            <h5>Tim Produksi</h5>
-                            <p>Dedicated team ensuring quality.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
-                    <div class="gallery-item">
-                        <img src="/build/assets/img/gallery-3.jpg" class="img-fluid w-100 rounded" alt="Kemasan Produk">
-                        <div class="gallery-overlay">
-                            <h5>Kemasan Ramah Lingkungan</h5>
-                            <p>Eco-friendly packaging solutions.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.8s">
-                    <div class="gallery-item">
-                        <img src="/build/assets/img/gallery-4.jpg" class="img-fluid w-100 rounded" alt="Distribusi">
-                        <div class="gallery-overlay">
-                            <h5>Distribusi Efisien</h5>
-                            <p>Logistics and delivery network.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="1.0s">
-                    <div class="gallery-item">
-                        <img src="/build/assets/img/gallery-5.jpg" class="img-fluid w-100 rounded" alt="Kegiatan Sosial">
-                        <div class="gallery-overlay">
-                            <h5>Kegiatan Sosial</h5>
-                            <p>Community engagement events.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="1.2s">
-                    <div class="gallery-item">
-                        <img src="/build/assets/img/gallery-6.jpg" class="img-fluid w-100 rounded" alt="Sumber Air">
-                        <div class="gallery-overlay">
-                            <h5>Sumber Mata Air</h5>
-                            <p>Natural mountain spring source.</p>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>

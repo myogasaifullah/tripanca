@@ -42,9 +42,12 @@ Route::get('/bidangusaha', function () {
     return view('landing.bidangusaha');
 });
 
-Route::get('/foto', function () {
-    return view('landing.foto');
+Route::get('/galeri', function () {
+    $photos = \App\Models\Photo::all();
+    return view('landing.foto', compact('photos'));
 });
+
+Route::resource('photos', \App\Http\Controllers\PhotoController::class)->middleware('auth');
 
 Route::get('/video', function () {
     return view('landing.video');
@@ -57,6 +60,7 @@ Route::get('/kontak', function () {
 Route::get('/banner', [BannerController::class, 'index'])->middleware('auth');
 Route::get('/produk', [ProductController::class, 'index'])->middleware('auth');
 Route::get('/ulasan', [TestimonialController::class, 'index'])->middleware('auth');
+Route::get('/foto', [\App\Http\Controllers\PhotoController::class, 'index'])->middleware('auth');
 
 
 Route::middleware('auth')->group(function () {
