@@ -48,9 +48,11 @@ Route::get('/galeri', function () {
 });
 
 Route::resource('photos', \App\Http\Controllers\PhotoController::class)->middleware('auth');
+Route::resource('videos', \App\Http\Controllers\VideoController::class)->middleware('auth');
 
 Route::get('/video', function () {
-    return view('landing.video');
+    $videos = \App\Models\Video::all();
+    return view('landing.video', compact('videos'));
 });
 
 Route::get('/kontak', function () {
