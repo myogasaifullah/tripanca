@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\BannerController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\TestimonialController;
+use App\Http\Controllers\BlogController;
 use Illuminate\Support\Facades\Route;
 
 use App\Models\Testimonial;
@@ -27,7 +28,8 @@ Route::get('/layanan', function () {
 });
 
 Route::get('/blog', function () {
-    return view('landing.blog');
+    $blogs = \App\Models\Blog::whereNotNull('published_at')->orderBy('published_at', 'desc')->get();
+    return view('landing.blog', compact('blogs'));
 });
 
 Route::get('/sejarah', function () {
@@ -73,6 +75,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('banners', BannerController::class);
     Route::resource('produks', \App\Http\Controllers\ProductController::class);
     Route::resource('testimonials', \App\Http\Controllers\TestimonialController::class);
+    Route::resource('blogs', BlogController::class);
 });
 
 require __DIR__.'/auth.php';
