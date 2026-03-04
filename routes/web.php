@@ -12,7 +12,11 @@ use App\Models\Testimonial;
 Route::get('/', function () {
     $banners = \App\Models\Banner::all();
     $testimonials = Testimonial::all();
-    return view('landing.welcome', compact('banners', 'testimonials'));
+    $blogs = \App\Models\Blog::whereNotNull('published_at')
+        ->orderBy('published_at', 'desc')
+        ->take(3)
+        ->get();
+    return view('landing.welcome', compact('banners', 'testimonials', 'blogs'));
 });
 
 Route::get('/dashboard', function () {
@@ -32,12 +36,15 @@ Route::get('/blog', function () {
     return view('landing.blog', compact('blogs'));
 });
 
+Route::get('/bloger', [BlogController::class, 'index']);
+
 Route::get('/sejarah', function () {
     return view('landing.sejarah');
 });
 
 Route::get('/visimisi', function () {
-    return view('landing.visimisi');
+    $visimisi = \App\Models\Visimisi::first();
+    return view('landing.visimisi', compact('visimisi'));
 });
 
 Route::get('/bidangusaha', function () {
@@ -65,6 +72,7 @@ Route::get('/banner', [BannerController::class, 'index'])->middleware('auth');
 Route::get('/produk', [ProductController::class, 'index'])->middleware('auth');
 Route::get('/ulasan', [TestimonialController::class, 'index'])->middleware('auth');
 Route::get('/foto', [\App\Http\Controllers\PhotoController::class, 'index'])->middleware('auth');
+Route::get('/kelolafoto', [\App\Http\Controllers\PhotoController::class, 'index'])->middleware('auth');
 
 
 Route::middleware('auth')->group(function () {
@@ -76,6 +84,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('produks', \App\Http\Controllers\ProductController::class);
     Route::resource('testimonials', \App\Http\Controllers\TestimonialController::class);
     Route::resource('blogs', BlogController::class);
+    Route::resource('visimisi', \App\Http\Controllers\VisimisiController::class);
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

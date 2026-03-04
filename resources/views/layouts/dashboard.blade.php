@@ -8,13 +8,13 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link href="/build/assets/css/dashboard.css" rel="stylesheet">
-    
+
     @stack('styles')
 </head>
 
 <body>
 
-     <!-- Header -->
+    <!-- Header -->
     <div class="header-top">
         <div class="logo">
             <div class="page-title">
@@ -22,19 +22,19 @@
                 <p>Tripanca Air Mineral</p>
             </div>
         </div>
-        
+
         <div class="header-actions">
             <div class="search-bar">
                 <i class="fas fa-search"></i>
                 <input type="text" placeholder="Cari produk, laporan, atau pengguna...">
             </div>
-            
+
             <div class="user-info">
                 <div class="notification-bell">
                     <i class="fas fa-bell"></i>
                     <span class="notification-badge">3</span>
                 </div>
-                
+
                 <div class="user-profile">
                     <div class="user-avatar">AD</div>
                     <div class="user-details">
@@ -57,12 +57,12 @@
             <li><a href="banner"><i class="fas fa-image"></i> <span>Banner</span></a></li>
             <!-- <li><a href="#"><i class="fas fa-info-circle"></i> <span>Tentang Kami</span></a></li> -->
             <li><a href="{{ route('produks.index') }}"><i class="fas fa-box"></i> <span>Produk</span></a></li>
-            <li><a href="bloger"><i class="fas fa-blog"></i> <span>Blog</span></a></li>
+            <li><a href="/bloger"><i class="fas fa-blog"></i> <span>Blog</span></a></li>
             <!-- <li><a href="#"><i class="fas fa-users"></i> <span>Tim</span></a></li> -->
             <li><a href="ulasan"><i class="fas fa-star"></i> <span>Ulasan</span></a></li>
             <!-- <li><a href="#"><i class="fas fa-phone"></i> <span>Kontak</span></a></li> -->
             <!-- <li><a href="#"><i class="fas fa-history"></i> <span>Sejarah</span></a></li> -->
-            <li><a href="#"><i class="fas fa-eye"></i> <span>Visi & Misi</span></a></li>
+            <li><a href="{{ route('visimisi.index') }}"><i class="fas fa-eye"></i> <span>Visi & Misi</span></a></li>
             <!-- <li><a href="#"><i class="fas fa-building"></i> <span>Bidang Usaha</span></a></li> -->
             <li><a href="kelolafoto"><i class="fas fa-images"></i> <span>Foto</span></a></li>
             <li><a href="videos"><i class="fas fa-video"></i> <span>Video</span></a></li>
@@ -75,7 +75,7 @@
     <!-- Content -->
     @yield('content')
 
-   <!-- Footer -->
+    <!-- Footer -->
     <div class="footer">
         <div class="footer-content">
             <div class="copyright">
@@ -151,7 +151,7 @@
             alert('Menu profil user akan ditampilkan di sini');
         });
     </script>
-    
+
     @stack('scripts')
 </body>
 
