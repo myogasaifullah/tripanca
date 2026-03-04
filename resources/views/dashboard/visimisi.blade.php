@@ -5,7 +5,7 @@
     <div class="container-fluid">
         <div class="page-header">
             <h1>Kelola Visi Misi</h1>
-            <a href="{{ route('visimisi.create') }}" class="btn btn-primary">
+            <a href="{{ route('kelolavisimisi.create') }}" class="btn btn-primary">
                 <i class="fas fa-plus"></i> Tambah Visi Misi
             </a>
         </div>
@@ -33,10 +33,10 @@
                         <td>{{ $visimisi->title }}</td>
                         <td>{{ $visimisi->subtitle }}</td>
                         <td>
-                            <a href="{{ route('visimisi.edit', $visimisi->id) }}" class="btn btn-sm btn-warning">
+                            <a href="{{ route('kelolavisimisi.edit', $visimisi->id) }}" class="btn btn-sm btn-warning">
                                 <i class="fas fa-edit"></i> Edit
                             </a>
-                            <form action="{{ route('visimisi.destroy', $visimisi->id) }}" method="POST" style="display:inline;">
+                            <form action="{{ route('kelolavisimisi.destroy', $visimisi->id) }}" method="POST" style="display:inline;">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus?')">

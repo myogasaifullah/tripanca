@@ -5,12 +5,12 @@
     <div class="container-fluid">
         <div class="page-header">
             <h1>Tambah Visi Misi</h1>
-            <a href="{{ route('visimisi.index') }}" class="btn btn-secondary">
+            <a href="{{ route('kelolavisimisi.index') }}" class="btn btn-secondary">
                 <i class="fas fa-arrow-left"></i> Kembali
             </a>
         </div>
 
-        <form action="{{ route('visimisi.store') }}" method="POST">
+        <form action="{{ route('kelolavisimisi.store') }}" method="POST">
             @csrf
 
             <div class="card">
@@ -135,7 +135,7 @@
 
             <div class="mt-3">
                 <button type="submit" class="btn btn-primary">Simpan</button>
-                <a href="{{ route('visimisi.index') }}" class="btn btn-secondary">Batal</a>
+                <a href="{{ route('kelolavisimisi.index') }}" class="btn btn-secondary">Batal</a>
             </div>
         </form>
     </div>

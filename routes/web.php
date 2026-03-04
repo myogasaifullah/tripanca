@@ -64,7 +64,14 @@ Route::get('/ulasan', [TestimonialController::class, 'index'])->middleware('auth
 Route::get('/kelolafoto', [\App\Http\Controllers\PhotoController::class, 'index'])->middleware('auth');
 
 
-Route::resource('visimisi', \App\Http\Controllers\VisimisiController::class);
+// Landing page routes - harus sebelum route resource dan auth
+Route::get('/visimisi', function () {
+    $visimisi = \App\Models\Visimisi::first();
+    return view('landing.visimisi', compact('visimisi'));
+});
+
+// CRUD routes untuk admin - harus menggunakan middleware auth
+Route::resource('kelolavisimisi', \App\Http\Controllers\VisimisiController::class)->middleware('auth');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -75,12 +82,6 @@ Route::middleware('auth')->group(function () {
     Route::resource('produks', \App\Http\Controllers\ProductController::class);
     Route::resource('testimonials', \App\Http\Controllers\TestimonialController::class);
     Route::resource('blogs', BlogController::class);
-});
-
-// Landing page routes - harus setelah route resource dan auth
-Route::get('/visimisi', function () {
-    $visimisi = \App\Models\Visimisi::first();
-    return view('landing.visimisi', compact('visimisi'));
 });
 
 Route::get('/foto', function () {

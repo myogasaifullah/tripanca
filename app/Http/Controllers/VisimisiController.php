@@ -53,7 +53,7 @@ class VisimisiController extends Controller
 
         Visimisi::create($request->all());
 
-        return redirect()->route('visimisi.index')->with('success', 'Visi Misi created successfully.');
+        return redirect()->route('kelolavisimisi.index')->with('success', 'Visi Misi created successfully.');
     }
 
     /**
@@ -101,7 +101,7 @@ class VisimisiController extends Controller
 
         $visimisi->update($request->all());
 
-        return redirect()->route('visimisi.index')->with('success', 'Visi Misi updated successfully.');
+        return redirect()->route('kelolavisimisi.index')->with('success', 'Visi Misi updated successfully.');
     }
 
     /**
@@ -111,6 +111,6 @@ class VisimisiController extends Controller
     {
         $visimisi->delete();
 
-        return redirect()->route('visimisi.index')->with('success', 'Visi Misi deleted successfully.');
+        return redirect()->route('kelolavisimisi.index')->with('success', 'Visi Misi deleted successfully.');
     }
 }
