@@ -42,18 +42,8 @@ Route::get('/sejarah', function () {
     return view('landing.sejarah');
 });
 
-Route::get('/visimisi', function () {
-    $visimisi = \App\Models\Visimisi::first();
-    return view('landing.visimisi', compact('visimisi'));
-});
-
 Route::get('/bidangusaha', function () {
     return view('landing.bidangusaha');
-});
-
-Route::get('/foto', function () {
-    $photos = \App\Models\Photo::all();
-    return view('landing.foto', compact('photos'));
 });
 
 Route::resource('photos', \App\Http\Controllers\PhotoController::class)->middleware('auth');
@@ -84,6 +74,17 @@ Route::middleware('auth')->group(function () {
     Route::resource('testimonials', \App\Http\Controllers\TestimonialController::class);
     Route::resource('blogs', BlogController::class);
     Route::resource('visimisi', \App\Http\Controllers\VisimisiController::class);
+});
+
+// Landing page routes - harus setelah route resource dan auth
+Route::get('/visimisi', function () {
+    $visimisi = \App\Models\Visimisi::first();
+    return view('landing.visimisi', compact('visimisi'));
+});
+
+Route::get('/foto', function () {
+    $photos = \App\Models\Photo::all();
+    return view('landing.foto', compact('photos'));
 });
 
 require __DIR__ . '/auth.php';
