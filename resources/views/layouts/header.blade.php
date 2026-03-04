@@ -12,13 +12,13 @@
             <div class="navbar-nav ms-auto py-0">
                 <a href="/" class="nav-item nav-link {{ request()->is('/') ? 'active' : '' }}">Beranda</a>
                 <a href="/tentang" class="nav-item nav-link {{ request()->is('tentang') ? 'active' : '' }}">Tentang</a>
-                <a href="/visimisi" class="nav-item nav-link {{ request()->is('visimisi') ? 'active' : '' }}">Visi Misi</a>
                 <a href="/layanan" class="nav-item nav-link {{ request()->is('layanan') ? 'active' : '' }}">Layanan</a>
                 <a href="/blog" class="nav-item nav-link {{ request()->is('blog') ? 'active' : '' }}">Blog</a>
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle {{ request()->is('sejarah') || request()->is('bidangusaha') || request()->is('foto') || request()->is('video') ? 'active' : '' }}" data-bs-toggle="dropdown">Halaman</a>
+                    <a href="#" class="nav-link dropdown-toggle {{ request()->is('sejarah') || request()->is('visimisi') || request()->is('bidangusaha') || request()->is('foto') || request()->is('video') ? 'active' : '' }}" data-bs-toggle="dropdown">Halaman</a>
                     <div class="dropdown-menu m-0">
                         <a href="/sejarah" class="dropdown-item {{ request()->is('sejarah') ? 'active' : '' }}">Sejarah</a>
+                        <a href="/visimisi" class="dropdown-item {{ request()->is('visimisi') ? 'active' : '' }}">Visi Misi</a>
                         <a href="/bidangusaha" class="dropdown-item {{ request()->is('bidangusaha') ? 'active' : '' }}">Bidang Usaha</a>
                         <a href="/foto" class="dropdown-item {{ request()->is('foto') ? 'active' : '' }}">Foto</a>
                         <a href="/video" class="dropdown-item {{ request()->is('video') ? 'active' : '' }}">Video</a>

@@ -64,6 +64,8 @@ Route::get('/ulasan', [TestimonialController::class, 'index'])->middleware('auth
 Route::get('/kelolafoto', [\App\Http\Controllers\PhotoController::class, 'index'])->middleware('auth');
 
 
+Route::resource('visimisi', \App\Http\Controllers\VisimisiController::class);
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
@@ -73,7 +75,6 @@ Route::middleware('auth')->group(function () {
     Route::resource('produks', \App\Http\Controllers\ProductController::class);
     Route::resource('testimonials', \App\Http\Controllers\TestimonialController::class);
     Route::resource('blogs', BlogController::class);
-    Route::resource('visimisi', \App\Http\Controllers\VisimisiController::class);
 });
 
 // Landing page routes - harus setelah route resource dan auth
